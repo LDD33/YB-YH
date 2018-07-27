@@ -135,9 +135,9 @@
 {
     [self popControllerwithstr:@"MyInvitationlistViewController" title:@"记账本"];
 }
-#pragma mark-----邀请卡被点击
+#pragma mark-----生成邀请卡被点击
 -(void)yaoqingkaClick
 {
-    
+    [self popControllerwithstr:@"InvitingCardVC" title:@""];
 }
 @end

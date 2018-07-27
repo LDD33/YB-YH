@@ -9,15 +9,12 @@
 #import "MySecurityCenterViewController.h"
 
 @interface MySecurityCenterViewController ()
-{
 
-}
 @end
 
 @implementation MySecurityCenterViewController
 
--(void)createView
-{
+-(void)createView{
     [super createView];
 
     float h =  self.nav_h + JN_HH(10); float jian = JN_HH(50);
@@ -41,24 +38,23 @@
 
 
     [self.view addSubview:JnLabelType(CGRectMake(JNVIEW_X0, h, 100, jian), 2, @"指纹解锁", 0)];
-
-    UIButton * zhiwenBtn = JnButtonImageTag(CGRectMake(SCREEN_WIDTH * 0.5, h, SCREEN_WIDTH * 0.5, jian), MYimageNamed(@""), self, @selector(zhiwenBtnClick), 0);
-    [self.view addSubview:zhiwenBtn];
-
-    [zhiwenBtn addSubview:JnImageView(CGRectMake(SCREEN_WIDTH  *0.5 - JNVIEW_W(15),  JN_HH(3), JN_HH(44), JN_HH(44)), MYimageNamed(@"jiantou_H1_88"))];
-    [zhiwenBtn addSubview:JnLabelType(CGRectMake(0, 0, SCREEN_WIDTH * 0.5 - JNVIEW_X(20), jian), 5, @"尚未设置", 2)];
+    UISwitch * sw = [[UISwitch alloc] initWithFrame:CGRectMake(SCREEN_WIDTH * 0.5, h, SCREEN_WIDTH * 0.5, jian)];
+    [sw setY: h + (jian - sw.height)/2];
+    [sw setX: SCREEN_WIDTH - JNVIEW_X0 - sw.width];
+    [self.view addSubview:sw];
+    [sw addTarget:self action:@selector(swClick:) forControlEvents:UIControlEventValueChanged];
      h += jian;
-  //  [self.view addUnderscoreWihtFrame:CGRectMake(, h - 1, SCREEN_WIDTH ), 1)];
+//    [self.view addUnderscoreWihtFrame:CGRectMake(, h - 1, SCREEN_WIDTH ), 1)];
 }
 
 #pragma mark----密码重置被点击
--(void)mimaBtnClick
-{
+-(void)mimaBtnClick{
     [self popControllerwithstr:@"MoneyPasswordViewController" title:@"资金密码"];
 }
-
--(void)zhiwenBtnClick
-{
+-(void)swClick:(UISwitch *)sw{
+    
+}
+-(void)zhiwenBtnClick{
 
 }
 

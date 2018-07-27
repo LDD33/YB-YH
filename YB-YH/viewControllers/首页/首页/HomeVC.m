@@ -147,7 +147,7 @@ XH_ATTRIBUTE(strong, UIButton, walletBtn);
     self.scolV = [[ShufflingView alloc]initWithFrame:CGRectMake(0, 0, 0, 0) BgColor:COLOR_WHITE];
     [self.containView addSubview:self.scolV];
     [self.scolV mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(JN_HH(80));
+        make.height.mas_equalTo(SCREEN_WIDTH/4);
         make.left.centerX.equalTo(self.containView);
         make.top.equalTo(lastBtn.mas_bottom).offset(20);
     }];
