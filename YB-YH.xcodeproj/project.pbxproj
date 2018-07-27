@@ -1916,6 +1916,7 @@
 				TargetAttributes = {
 					18FECED120C0ED8C008E4BE4 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0940;
 						SystemCapabilities = {
 							com.apple.Keychain = {
 								enabled = 0;
@@ -2322,6 +2323,7 @@
 			baseConfigurationReference = A4653356825552DCFDA6A14D /* Pods-YB-YH.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Guan Wei (JG36ZDYAY6)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: Guan Wei (JG36ZDYAY6)";
 				CODE_SIGN_STYLE = Manual;
@@ -2346,6 +2348,7 @@
 			baseConfigurationReference = C2428BAC5D79D18835E188E2 /* Pods-YB-YH.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Tianjin E-bone Digital Technology Co.,Ltd. (M5CU4A6R6T)";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Tianjin E-bone Digital Technology Co.,Ltd. (M5CU4A6R6T)";
 				CODE_SIGN_STYLE = Manual;
