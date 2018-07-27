@@ -7,12 +7,20 @@
 //
 
 #import "MySecurityCenterViewController.h"
+#import "LAContextManger.h"
 
 @interface MySecurityCenterViewController ()
-
+XH_ATTRIBUTE(strong, LAContextManger, lamanager);
 @end
 
 @implementation MySecurityCenterViewController
+
+//-(LAContextManger *)lamanager{
+//    if (!_lamanager) {
+//        _lamanager = [LAContextManger Initialize];
+//    }
+//    return _lamanager;
+//}
 
 -(void)createView{
     [super createView];
@@ -21,7 +29,7 @@
 
     [self.view addSubview:JnUIView(CGRectMake(0, h, SCREEN_WIDTH, JN_HH(150)), COLOR_WHITE)];
     [self.view addSubview:JnLabelType(CGRectMake(JNVIEW_X0, h, 100, jian), 2, @"手机号", 0)];
-    [self.view addSubview:JnLabelType(CGRectMake(JNVIEW_X0, h, SCREEN_WIDTH - JNVIEW_W(20), jian), 2, @"131******131", 2)];
+    [self.view addSubview:JnLabelType(CGRectMake(JNVIEW_X0, h, SCREEN_WIDTH - JNVIEW_W(20), jian), 2, [NSString userIphoneHaoma:self.model.mobile], 2)];
     h += jian;
     [self.view addUnderscoreWihtFrame:CGRectMake(0, h - 1, SCREEN_WIDTH, 1)];
 
@@ -52,7 +60,7 @@
     [self popControllerwithstr:@"MoneyPasswordViewController" title:@"资金密码"];
 }
 -(void)swClick:(UISwitch *)sw{
-    
+    [LAContextManger sharedInstance].isopen = sw.on;
 }
 -(void)zhiwenBtnClick{
 

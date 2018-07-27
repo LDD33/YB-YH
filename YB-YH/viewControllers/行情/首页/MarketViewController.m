@@ -198,15 +198,6 @@ XH_ATTRIBUTE(strong, UILabel, lab1);
         make.height.mas_equalTo(40);
     }];
     JNViewStyle(btn, JN_HH(15), COLOR_A1, 1);
-    
-    UIButton * btn1 = [UIKitAdditions buttonWithText:@"兑换比例历史记录" backGroundColor:nil textColor:COLOR_A1 fontSize:0 target:self selector:@selector(historyClick)];
-    [self.bodyView addSubview:btn1];
-    [btn1 mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.right.equalTo(self.bodyView).offset(-20);
-        make.top.equalTo(btn.mas_bottom).offset(20);
-        make.width.mas_equalTo(150);
-        make.height.mas_equalTo(40);
-    }];
 }
 #pragma mark 兑换按钮点击了
 -(void)valuationClick{
@@ -326,10 +317,6 @@ XH_ATTRIBUTE(strong, UILabel, lab1);
         }
     }
     return YES;
-}
-#pragma mark 历史点击了
--(void)historyClick{
-    
 }
 -(void)change{
     self.numTf.text = @"";
